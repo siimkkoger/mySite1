@@ -1,0 +1,152 @@
+
+<% include partials/header %>
+
+    <div id="navbar" class="navbar-gone">
+        <div class="col-md-1">
+
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">4Years2Come</a>
+        </div>
+        <div class="col-md-5">
+
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+
+            <li><a href="/about">About</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/videos">Videos</a></li>
+            <li><a href="/contact">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+    <div id="banner">
+        <p id="LOGO">4Y</p>
+        <p id="LOGO">2C</p>
+    </div>
+
+    <div id="navigation-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <a href="/about">About</a></div>
+                <div class="col-md-3 col-sm-3">
+                    <a href="/resume">Resume</a></div>
+                <div class="col-md-3 col-sm-3">
+                    <a href="/videos">Videos</a></div>
+                <div class="col-md-3 col-sm-3">
+                    <a href="/contact">Contact</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="right-col row">
+        <div class="col-md-2">
+
+        </div>
+        <div id="container-right" class="col-md-8">
+            <div id="slideshow-box">
+                <div class="slideshow-container">
+                    <img style='height: 100%; width: 100%; object-fit: contain' class="mySlides" src="images/20170411_102854.jpg">
+                    <img style='height: 100%; width: 100%; object-fit: contain' class="mySlides" src="/images/20170508_164833.jpg">
+                    <img style='height: 100%; width: 100%; object-fit: contain' class="mySlides" src="/images/snipcaptures.PNG">
+                    <div id="dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+
+
+    <div id="roommaker">
+
+    </div>
+
+
+    <script>
+        console.log("Has loaded");
+
+        let dots = document.querySelectorAll(".dot");
+        for(let d = 0; d < dots.length; d++){
+            let dot = dots[d];
+            dot.addEventListener("click", () => {
+                slideIndex = d;
+                showDivs(d);
+            });
+        }
+
+        let slideIndex = 0;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            if(n !== -1 && n !== 1){
+                n = 1;
+            }
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            let x = document.getElementsByClassName("mySlides");
+            if (n > x.length-1) {slideIndex = 0}
+            if (n < 0) {slideIndex = x.length-1}
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex].style.display = "block";
+
+            // -------------------------------------------------------------
+
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            dots[slideIndex].className += " active";
+
+            setTimeout(() => plusDivs(+1), 4000);
+        }
+
+
+
+    </script>
+
+    <script>
+        window.onscroll = changePos;
+
+        function changePos() {
+            let header = document.getElementById("navbar");
+            if (window.pageYOffset > 350) {
+                header.classList.add("navbar-fixed");
+                header.classList.remove("navbar-gone");
+            } else {
+                header.classList.remove("navbar-fixed");
+                header.classList.add("navbar-gone");
+            }
+        }
+    </script>
+
+
+<% include partials/footer %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

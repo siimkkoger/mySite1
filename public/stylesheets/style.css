@@ -1,0 +1,281 @@
+
+body{
+    background: #fafafa;
+}
+
+h1{
+    text-align: center;
+}
+
+.slideshow-container {
+    margin: 0px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mySlides{
+    width: 100%;
+    transition: 0.5s;
+}
+#gif{
+    height: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    background-color: #bfbfbf;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    -webkit-transition: all .45s ease;
+    -moz-transition: all .45s ease;
+    -ms-transition: all .45s ease;
+    -o-transition: all .45s ease;
+    transition: all .45s ease;
+    vertical-align: middle;
+}
+
+.active-dot, .dot:hover {
+    background-color: #fafafa;
+    transform: scale(1.25, 1.25);
+}
+
+.dot:hover {
+    transform:scale(1.2);
+    -ms-transform:scale(1.2); /* IE 9 */
+    -moz-transform:scale(1.2); /* Firefox */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -o-transform:scale(1.2); /* Opera */
+}
+
+.container{
+    text-align: center;
+}
+
+img:hover{
+    opacity: 0.75;
+}
+
+#slideshow-box{
+    padding-top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.slideshow-container{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#dots{
+    padding-top: 5px;
+    margin: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 46%;
+}
+
+
+#navigation-bar{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: #011218;
+    text-transform: uppercase;
+}
+
+#navigation-bar a{
+    text-decoration: none;
+    color: #b9b9bb;
+    font-size: 20px;
+}
+
+#navigation-bar a:hover{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#banner{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-color: #011218;
+    text-align: center;
+}
+
+#banner h1, #banner a{
+    display: inline;
+}
+
+#banner p{
+    color: #ffffff;
+    font-size: 60px;
+    margin: 0px;
+    padding: 0px;
+    transition: 1.5s;
+}
+
+
+#banner a{
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 5px;
+    margin-right: 100px;
+}
+
+
+.list-group{
+    margin: 50px;
+}
+
+
+#navigation-bar .container a{
+    transition: all 0.8s ease;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+
+#roommaker{
+    margin-top: 700px;
+}
+
+
+.nodisplay{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    margin: 0;
+}
+
+
+
+/*---- NAVBAR ------------------------------------------------------------------------------------------------------*/
+
+.navbar-fixed{
+    display: block;
+    visibility: visible;
+    position:fixed;
+    z-index:100;
+    top:0;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    -webkit-animation: fadeIn 0.75s;
+    animation: fadeIn 0.75s;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#nav-right{
+    text-align: right;
+}
+
+.navbar-gone{
+    display: none;
+    visibility: hidden;
+    width: 0;
+    transition: all 500ms ease-in-out;
+    -webkit-animation: fadeIn 0.75s;
+    animation: fadeIn 0.75s;
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#navbar{
+    background-color: #011218;
+    text-decoration: none;
+}
+
+#navbar a{
+    color: #fdfffd;
+}
+
+#navbar li.active{
+    background-color: #ab1014;
+    transform: scale(1.25, 1.25);
+    z-index: 100;
+}
+
+li:hover{
+    color: #d21419 !important;
+}
+
+
+/* -----  FOOTER --------------------------------------------------------------*/
+
+#footer{
+    height: 400px;
+    background-color: #011218;
+}
+
+.text-middle{
+    text-align: center;
+}
+
+
+/*-----  VIDEOS --------------------------------------------------------------*/
+
+iframe{
+    max-width:100%;
+    max-height:100%;
+}
+
+#yt-banner{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: #ab1014;
+    padding: 40px;
+    font-size: 50px;
+}
+
+.content-main{
+    margin-top: 70px;
+}
+#yt-banner{
+    color: white;
+}
+
+/*----- RESUME --------------------------------------------------------------*/
+.resume-img{
+    max-width: 50%;
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
